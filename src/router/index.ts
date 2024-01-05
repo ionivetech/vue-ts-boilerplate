@@ -9,15 +9,15 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'counter',
       meta: { layout: FirstLayout },
-      component: () => import('@/views/HomeView.vue')
+      component: () => import('@/views/CounterView.vue')
     },
     {
       path: '/about',
-      name: 'about',
+      name: 'your-name',
       meta: { layout: SecondLayout },
-      component: () => import('@/views/AboutView.vue')
+      component: () => import('@/views/YourNameView.vue')
     }
   ]
 })
