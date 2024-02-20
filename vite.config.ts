@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import VueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineConfig({
   plugins: [
@@ -37,7 +38,10 @@ export default defineConfig({
       eslintrc: {
         enabled: true
       }
-    })
+    }),
+
+    // New vue devtools
+    VueDevTools()
   ],
   resolve: {
     alias: {
