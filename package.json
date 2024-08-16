@@ -1,0 +1,55 @@
+{
+  "name": "boilerplate",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint-staged": "lint-staged",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "pinia": "^2.2.2",
+    "vue": "^3.4.38",
+    "vue-router": "^4.4.3"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.26.0",
+    "@commitlint/cz-commitlint": "^19.4.0",
+    "@rushstack/eslint-patch": "^1.10.4",
+    "@stylistic/eslint-plugin-ts": "^2.6.4",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^22.3.0",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "@vue/tsconfig": "^0.5.1",
+    "commitizen": "^4.3.0",
+    "eslint": "^9.9.0",
+    "eslint-plugin-vue": "^9.27.0",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.9",
+    "npm-run-all2": "^6.2.2",
+    "typescript": "^5.5.4",
+    "unplugin-auto-import": "^0.18.2",
+    "unplugin-vue-components": "^0.27.4",
+    "vite": "^5.4.1",
+    "vite-plugin-vue-devtools": "^7.3.8",
+    "vue-tsc": "^2.0.29"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": [
+      "eslint --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
